@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'TLToastHUD_Example' do
+  pod 'TLToastHUD', :path => '../'
+
+  target 'TLToastHUD_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
