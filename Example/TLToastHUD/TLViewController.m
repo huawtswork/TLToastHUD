@@ -7,6 +7,7 @@
 //
 
 #import "TLViewController.h"
+#import <TLToastHUD/TLToastHUD.h>
 
 @interface TLViewController ()
 
@@ -18,6 +19,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    [TLProcessHUD showWithStatus:@"loading" on:self.view autoDismissDelay:15 completion:^(BOOL success) {
+//        
+//    }];
+    [TLToast showToast:@"dfkjasdfkop asdkflaskd;lfkasd;" duration:2 completion:^(BOOL success) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
