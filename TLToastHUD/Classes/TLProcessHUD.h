@@ -1,7 +1,7 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString * const kWebJSProcessHUDDefaultStatus;
+extern NSString * const kTLProcessHUDDefaultStatus;
 
 @interface TLProcessHUD : UIView
 + (void)showWithStatus:(NSString *)status on:(UIView *)superview autoDismissDelay:(double)delay completion:(void(^)(BOOL success))handler;

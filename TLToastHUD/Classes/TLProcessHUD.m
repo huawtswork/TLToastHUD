@@ -3,7 +3,7 @@
 #import <Masonry/Masonry.h>
 #import "TLToastHUDEngine.h"
 
-NSString * const kWebJSProcessHUDDefaultStatus = @"加载中···";
+NSString * const kTLProcessHUDDefaultStatus = @"加载中···";
 
 @interface TLProcessHUD ()
 
