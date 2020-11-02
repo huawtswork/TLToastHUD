@@ -1,8 +1,8 @@
 {
   "name": "TLToastHUD",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "summary": "TLToastHUD - Toast提示和 HUD 提示.",
-  "homepage": "https://github.com/huawt/TLToastHUD",
+  "homepage": "https://github.com/huawtswork/TLToastHUD",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -11,8 +11,8 @@
     "huawt": "ghost263sky@163.com"
   },
   "source": {
-    "git": "https://github.com/huawt/TLToastHUD.git",
-    "tag": "1.0.0"
+    "git": "https://github.com/huawtswork/TLToastHUD.git",
+    "tag": "1.0.2"
   },
   "platforms": {
     "ios": "8.0"

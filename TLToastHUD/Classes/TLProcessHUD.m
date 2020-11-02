@@ -171,6 +171,25 @@ NSString * const kTLProcessHUDDefaultStatus = @"加载中···";
     }
 }
 
++ (TLProcessHUD *)showWithStatus:(NSString *)status on:(UIView *)superview autoDismissDelay:(double)delay
+{
+    if (!superview || ![superview isKindOfClass:[UIView class]]) {
+        return nil;
+    }
+    TLProcessHUD *hud = [[TLProcessHUD alloc] init];
+    [hud configureWithStatus:status];
+    [superview addSubview:hud];
+    [hud mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(hud.superview);
+    }];
+    [hud startRun];
+    if (delay > 0) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [hud hudDismiss];
+        });
+    }
+    return hud;
+}
 
 
 + (void)dismissOn:(UIView*)superview
@@ -208,6 +227,15 @@ NSString * const kTLProcessHUDDefaultStatus = @"加载中···";
             break;
         }
     }
+}
+
+- (void)hudDismiss{
+    if (!self.superview) {
+        return;
+    }
+    
+    [self stopRun];
+    [self removeFromSuperview];
 }
 
 - (void)configureWithStatus:(NSString *)status

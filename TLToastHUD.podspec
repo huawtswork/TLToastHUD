@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TLToastHUD'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'TLToastHUD - Toast提示和 HUD 提示.'
   s.homepage         = 'https://github.com/huawtswork/TLToastHUD'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

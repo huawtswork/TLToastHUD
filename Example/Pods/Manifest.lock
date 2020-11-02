@@ -1,13 +1,13 @@
 PODS:
   - Masonry (1.1.0)
-  - TLToastHUD (1.0.0):
+  - TLToastHUD (1.0.2):
     - Masonry
 
 DEPENDENCIES:
   - TLToastHUD (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Masonry
 
 EXTERNAL SOURCES:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  TLToastHUD: ab86f4152c60f6483bd0fbf919f168b379c1688a
+  TLToastHUD: d4b579980da71ca5edc128df9c8a93bca3456668
 
 PODFILE CHECKSUM: e80ac9cb76cc3a16c9b9231092047f66bb1e4ae6
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.10.0
