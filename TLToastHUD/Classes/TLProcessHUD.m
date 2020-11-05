@@ -75,7 +75,7 @@ NSString * const kTLProcessHUDDefaultStatus = @"加载中···";
 - (void)configSubViews
 {
     self.backgroundColor = [UIColor clearColor];
-    self.userInteractionEnabled = NO;
+//    self.userInteractionEnabled = NO;
     [self addSubview:self.centerView];
     [self.centerView addSubview:self.imageView];
     [self.imageView addSubview:self.indicatorView];
