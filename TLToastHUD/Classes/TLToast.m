@@ -14,18 +14,20 @@ double const kWebJSShowToastDefaultDuration = 1.5;
             completion(NO);
         }
     }else{
-        BOOL isP = NO;
-        for (UIView * iv in [UIApplication sharedApplication].keyWindow.subviews) {
-            if ([iv isKindOfClass:[TLAlertView class]]) {
-                isP = YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            BOOL isP = NO;
+            for (UIView * iv in [UIApplication sharedApplication].keyWindow.subviews) {
+                if ([iv isKindOfClass:[TLAlertView class]]) {
+                    isP = YES;
+                }
             }
-        }
-        if(!isP){
-            TLAlertView *sAlert = [[TLAlertView alloc] initWithFrame:CGRectMake((kTLSWidth - 170) / 2.0, kTLSHeight / 2.0 - 110.0, 170, 80) text:toast];
-            [[UIApplication sharedApplication].delegate.window addSubview:sAlert];
-            [sAlert show:duration];
-            !completion?:completion(YES);
-        }
+            if(!isP){
+                TLAlertView *sAlert = [[TLAlertView alloc] initWithFrame:CGRectMake((kTLSWidth - 170) / 2.0, kTLSHeight / 2.0 - 110.0, 170, 80) text:toast];
+                [[UIApplication sharedApplication].delegate.window addSubview:sAlert];
+                [sAlert show:duration];
+                !completion?:completion(YES);
+            }
+        });
     }
 }
 
